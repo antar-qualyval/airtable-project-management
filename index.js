@@ -81,7 +81,7 @@ app.post("/saveData", async (req, res, next) => {
     }
   );
 });
-app.get("/", function(req, res)=> res.send('<h3>API Working Find</h3>'))
+app.get("/", (req, res)=> res.send('<h3>API Working Find</h3>'))
 app.get("/records/:id", async (req, res, next) => {
   templateBase(AIRTABLE_TEMPLATE_TABLE_1_ID).find(
     req.params.id,
